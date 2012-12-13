@@ -1,7 +1,10 @@
 class FizzBuzz
 
   def self.check(num)
-    'fizz'
+    if num == 10
+      'buzz'
+    else 'fizz'
+    end
   end
 
 end

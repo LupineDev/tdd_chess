@@ -7,13 +7,17 @@ describe FizzBuzz do
   describe ".check(num)" do
     it "should return 'fizz' when passed a mulitple of 3" do
       test_range.each do |i|
-        FizzBuzz.check(i).should eq("fizz") if i % 3 == 0
+        if i % 3 == 0 && i % 5 != 0
+          FizzBuzz.check(i).should eq("fizz")
+        end
       end
     end
 
     it "should return 'buzz' when passed a mulitple of 5" do
       test_range.each do |i|
-        FizzBuzz.check(i).should eq("buzz") if i % 5 == 0
+        if i % 5 == 0 && i % 3 != 0
+          FizzBuzz.check(i).should eq("buzz")
+        end
       end
     end
   end

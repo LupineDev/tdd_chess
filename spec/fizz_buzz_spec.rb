@@ -20,5 +20,13 @@ describe FizzBuzz do
         end
       end
     end
+
+    it "should return nil when passed a number that is not a mulitple of 3 or 5" do
+      test_range.each do |i|
+        if i % 5 != 0 && i % 3 != 0
+          FizzBuzz.check(i).should be_nil
+        end
+      end
+    end
   end
 end

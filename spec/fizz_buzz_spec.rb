@@ -28,5 +28,13 @@ describe FizzBuzz do
         end
       end
     end
+
+    it "should return 'fizzbuzz' when passed a number that is a mulitple of 3 AND 5" do
+      test_range.each do |i|
+        if i % 5 == 0 && i % 3 == 0
+          FizzBuzz.check(i).should eq("fizzbuzz")
+        end
+      end
+    end
   end
 end
